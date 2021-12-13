@@ -1,0 +1,47 @@
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card {
+    width: 500px;
+    height: 280px;
+    box-shadow: 2px 2px 2px 2px grey;
+    background-image: url("../../assets/backgrounds/abstract2.jpg");
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+
+    .logo {
+        display: flex;
+        justify-content: end;
+
+        img {
+            height: 20%;
+            width: 20%;
+            border-radius: 5px;
+            margin: 2px 2px;
+        }
+    }
+
+    .card-details {
+        width: 100%;
+        text-align: center;
+
+        .card-number {
+            word-spacing: 20px;
+            font-size: 30px;
+        }
+        .card-name {
+            text-align: center;
+        }
+    }
+}
+
+.back-card {
+    @extend .card;
+    background-image: url("../../assets/backgrounds/abstract1.jpg");
+}

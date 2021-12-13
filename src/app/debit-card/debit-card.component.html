@@ -1,0 +1,27 @@
+<div class="card-wrapper">
+    <div class="card">
+        <div class="logo">
+            <img *ngIf="showMaster" src="../../assets/logos/mastercard-logo.png" />
+            <img *ngIf="showVerve" src="../../assets/logos/verve-logo.png" />
+            <img *ngIf="showVisa" src="../../assets/logos/visa-logo.png" />
+        </div>
+    
+        <div class="card-details">
+            <p class="card-number">{{spaceText(cardDetailsFromParent.cardNumber)}}</p>
+            <p class="cvv">{{cardDetailsFromParent.expiryDate}}</p>
+            <p class="card-name">{{cardDetailsFromParent.cardHolder}}</p>
+        </div>
+    </div>
+
+    <div class="back-card">
+        <div class="logo">
+            <img *ngIf="showMaster" src="../../assets/logos/mastercard-logo.png" />
+            <img *ngIf="showVerve" src="../../assets/logos/verve-logo.png" />
+            <img *ngIf="showVisa" src="../../assets/logos/visa-logo.png" />
+        </div>
+    
+        <div class="card-details">
+            <p class="cvv">CVV: {{cardDetailsFromParent.cvv}}</p>
+        </div>
+    </div>
+</div>

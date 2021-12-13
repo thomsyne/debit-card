@@ -1,0 +1,38 @@
+<div class="body">
+  <div class="form">
+    <div class="form-wrapper">
+      <div class="form-group">
+
+        <h1> Debit Card Details</h1>
+
+        <div class="form-item">
+          <label>Card Number</label>
+          <input maxlength="12" (keyup)="generateDetails()" [(ngModel)]="cardNumber" type="number" placeholder="#### #### #### ####"/>
+        </div>
+
+        <div class="form-item">
+          <label>Card Holder</label>
+          <input (keyup)="generateDetails()" [(ngModel)]="cardHolder" type="text" placeholder="Jane Doe"/>
+        </div>
+
+        <div class="form-item">
+          <label>Expiry Date</label>
+          <input maxlength="5" (keyup)="generateDetails()" [(ngModel)]="expiryDate" type="text" placeholder="MM/YY"/>
+        </div>
+
+        <div class="form-item">
+          <label>CVV</label>
+          <input maxlength="3" (keyup)="generateDetails()" [(ngModel)]="cvv" type="password" placeholder="xxx"/>
+        </div>
+
+        <button class="button" type="submit" (click)="submit()" >Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form">
+    <div class="form-wrapper">
+      <app-debit-card [cardDetailsFromParent]="cardDetails" ></app-debit-card>
+    </div>
+  </div>
+</div>

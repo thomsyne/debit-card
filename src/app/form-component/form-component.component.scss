@@ -1,0 +1,36 @@
+.body {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .form {
+        background-color: rgb(252, 252, 252);
+        width: 50%;
+        height: 100%;
+
+        .form-wrapper {
+            height: 100%;
+            margin-left: 20px;
+            position: absolute;
+            top: 30%;
+
+            .form-item {
+                margin: 10px 0px;
+                display: flex;
+                gap: 12px;
+
+                input {
+                    border: rgb(110, 108, 108) 1px solid;
+                    border-radius: 5px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .card {
+        
+        width: 50%;
+    }
+}
